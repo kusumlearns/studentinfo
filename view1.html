@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="topnav">
+
+        <img style="float:left" src="logo.gif" alt="" srcset="" height="50">
+        <a href="login.html">Login</a>
+        <a href="index.html">Search</a>
+        <a class="active" href="add.html">Add New</a>
+        <a href="view.html">List</a>
+        <a href="index.html">Home</a>
+    </div>
+
+    <div class="myform">
+        <h1>Individual Student</h1>
+        <form action="view.html" method="get">
+
+            <div class="container">
+
+                <div class="formfieldleft">
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" value="Peter" name="uname" required disabled>
+                </div>
+
+                <div class="formfieldright">
+                    <label for="lname"><b>First Name</b></label>
+                    <input type="text" value="Gregory" name="uname" required>
+                </div>
+
+                <div style="padding-top: 5em;">
+                    <label for="mname"><b>Mother's Name</b></label>
+                    <input type="text" value="Charlie Gregory" name="uname">
+                </div>
+
+                <label for="fname"><b>Father's Name</b></label>
+                <input type="text" placeholder="Bob Gregory" name="uname">
+
+                <div class="formfieldleft">
+                    <label for="uname"><b>DOB</b></label>
+                    <input type="date" value="2001-01-22" name="uname">
+                </div>
+                <div class="clear" style="padding-top: 70px;">&nbsp;</div>
+
+                <div class="formfieldleft">
+                    <label for="uname"><b>Address 1</b></label>
+                    <input type="text" value="Kathmandu" name="uname">
+                </div>
+
+
+                <div class="formfieldright">
+                    <label for="uname"><b>Address 2</b></label>
+                    <input type="text" name="uname">
+                </div>
+
+                <div class="clear" style="padding-top: 70px;">&nbsp;</div>
+                <div class="formfieldleft">
+                    <label for="uname"><b>Phone Number</b></label>
+                    <input type="text" value="9834220558" name="uname">
+                </div>
+
+
+                <div class="formfieldright">
+                    <label for="uname"><b>Email </b></label>
+                    <input type="text" value="gregory@gmail.com" name="uname">
+                </div>
+                <div class="clear" style="padding-top: 70px;">&nbsp;</div>
+
+                <label for="uname"><b>Remarks </b></label>
+                <textarea>He is a very good student.</textarea>
+            </div>
+
+            <div style="padding-top: 0.5em;">
+                <div class="formfieldleft">
+                    <button id="edit">Edit</button>
+                </div>
+                <div style="float: left; padding-left: 0.5em;">
+                    <button>Delete</button>
+                </div>
+
+                <div class="formfieldright">
+                    <button>Update</button>
+                </div>
+
+            </div>
+
+
+
+        </form>
+    </div>
+
+    <script>
+        const inputs = document.getElementsByTagName("input");
+        // disable all inputs
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].disabled = true;
+        }
+        const text_area = document.getElementsByTagName("textarea")[0];
+        text_area.disabled = true;
+
+        document.getElementById("edit").addEventListener("click", function(event){
+            event.preventDefault();
+            // enable all inputs
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].disabled = false;
+            }
+            text_area.disabled = false;
+            });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
